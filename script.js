@@ -42,8 +42,15 @@ const femaleNames = [
   "Ama"
 ];
 
-//Limit Date
+//Limit Date  PREVENT FUTURE DATES 
 
 const today = newDate()
 
 birthdate.max = today.toISOString().split("T")[0];
+
+//Leap Year Function
+
+function isLeapYear (year) {
+  return (year % 400 === 0  || year % 4 === 0 & year % 100 !== 0)
+}
+
