@@ -159,3 +159,14 @@ function displayResult(dayIndex, name) {
   result.classList.remove("hidden");
 }
 
+// CLEAR FORM
+function clearForm() {
+
+  form.reset();
+
+  dateError.textContent = "";
+  genderError.textContent = "";
+
+  result.classList.add("hidden");
+}
+
