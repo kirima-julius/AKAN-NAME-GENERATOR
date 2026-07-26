@@ -64,3 +64,53 @@ function getDaysInMonth (month, year) {
 
   return days[month - 1]
 }
+
+//Validation
+
+function validateInput(dateInput, genderInput) {
+  dateError.textContent = "";
+  genderError.textContent = "";
+
+  if (birthdate === "") {
+    dateError.textContent = "Please choose your birthdate.";
+    alert("Please choose your birthdate.");
+    return false
+  }
+
+  if (genderInput === null) {
+    genderError.textContent = "Please select your gender.";
+    alert("Please select your gender.");
+    return false
+  }
+
+  const values = dateInput.split("-");
+  const year = Number(values[0]);
+  const month = Number(values[1]);
+  const day = Number(values[2]);
+
+
+  if (year < 1900) {
+    dateError.textContent = "Please enter a valid birth year.";
+    alert("Please enter a valid birth year.");
+    return false;
+  }
+
+  const maxDay = getDaysInMonth(month, year);
+
+  if (day < 1 || day > maxDay) {
+    dateError.textContent = "Please enter a valid date.";
+    alert("Please enter a valid date.");
+    return false;
+  }
+
+  const enteredDate = new Date(year, month - 1, day);
+
+  if (enteredDate > today) {
+    dateError.textContent = "Birthdate cannot be in the future.";
+    alert("Birthdate cannot be in the future.");
+    return false;
+  }
+
+  return true;
+
+}
