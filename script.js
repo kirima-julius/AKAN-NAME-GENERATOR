@@ -9,3 +9,35 @@ const dayText = document.getElementById("dayDisplay");
 
 const dateError = document.getElementById("dateError");
 const genderError = document.getElementById("genderError");
+
+
+// ARRAYS
+const weekDays = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+
+const maleNames = [
+  "Kwasi",
+  "Kwadwo",
+  "Kwabena",
+  "Kwaku",
+  "Yaw",
+  "Kofi",
+  "Kwame"
+];
+
+const femaleNames = [
+  "Akosua",
+  "Adwoa",
+  "Abenaa",
+  "Akua",
+  "Yaa",
+  "Afua",
+  "Ama"
+];
