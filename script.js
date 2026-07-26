@@ -114,3 +114,27 @@ function validateInput(dateInput, genderInput) {
   return true;
 
 }
+
+// CALCULATE DAY
+function calculateDay(day, month, year) {
+
+  const CC = Math.floor(year / 100);
+  const YY = year % 100;
+
+  let dayIndex =
+    (
+      Math.floor(CC / 4) -
+      (2 * CC) -
+      1 +
+      Math.floor((5 * YY) / 4) +
+      Math.floor((26 * (month + 1)) / 10) +
+      day
+    ) % 7;
+
+  if (dayIndex < 0) {
+    dayIndex = dayIndex + 7;
+  }
+
+  return dayIndex;
+}
+
