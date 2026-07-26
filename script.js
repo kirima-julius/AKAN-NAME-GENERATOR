@@ -41,3 +41,9 @@ const femaleNames = [
   "Afua",
   "Ama"
 ];
+
+//Limit Date
+
+const today = newDate()
+
+birthdate.max = today.toISOString().split("T")[0];
