@@ -43,7 +43,7 @@ This project demonstrates the use of JavaScript functions, arrays, control flow,
 1. Clone the repository.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/akan-name-generator.git
+https://kirima-julius.github.io/AKAN-NAME-GENERATOR/
 ```
 
 2. Navigate into the project folder.
