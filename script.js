@@ -170,3 +170,30 @@ function clearForm() {
   result.classList.add("hidden");
 }
 
+/ SUBMIT
+form.addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  const dateInput = birthdate.value;
+
+  const genderInput = document.querySelector(
+    'input[name="gender"]:checked'
+  );
+
+  if (validateInput(dateInput, genderInput) === false) {
+    return;
+  }
+
+  const values = dateInput.split("-");
+
+  const year = Number(values[0]);
+  const month = Number(values[1]);
+  const day = Number(values[2]);
+
+  const dayIndex = calculateDay(day, month, year);
+
+  const name = getAkanName(dayIndex, genderInput.value);
+
+  displayResult(dayIndex, name);
+});
