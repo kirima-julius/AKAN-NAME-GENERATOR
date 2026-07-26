@@ -138,3 +138,13 @@ function calculateDay(day, month, year) {
   return dayIndex;
 }
 
+// GET AKAN NAME
+function getAkanName(dayIndex, gender) {
+
+  if (gender === "male") {
+    return maleNames[dayIndex];
+  }
+
+  return femaleNames[dayIndex];
+}
+
