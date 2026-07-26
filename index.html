@@ -4,8 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akan Culture & Name Generator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+
+    <!-- 1. HERO SECTION -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">Ghanaian Tradition</span>
+            <h1>Discover Your Traditional Akan Name</h1>
+            <p>In Akan culture, children are named after the specific day of the week they enter the world. Every day carries its own unique spirit, character traits, and sacred name.</p>
+            <a href="#generator-section" class="cta-btn">Explore Your Name</a>
+        </div>
+    </header>
+
+    <!-- 2. MAIN CONTENT & FORM SECTION -->
+    <main id="generator-section" class="main-content">
+        <div class="section-container">
+            
+            <!-- Left Column: Educational Content -->
+            <div class="info-column">
+                <h2>The Meaning Behind The Names</h2>
+                <p>The Akan people of Ghana use a naming system where your soul's name corresponds directly to your birth day. These names reflect cosmic attributes associated with that day of the week.</p>
+                <p>Scroll down, enter your accurate birthdate details, select your gender, and let our verified engine calculate your precise day-name.</p>
+            </div>
+
+            <!-- Right Column: Interactive Form Card -->
+            <div class="form-column">
+                <div class="card">
+                    <h3>Name Finder</h3>
+                    <form id="akanForm" novalidate>
+                        <div class="form-group">
+                            <label for="birthdate">Select Your Birthdate:</label>
+                            <input type="date" id="birthdate" required>
+                            <p id="dateError" class="error-text"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Select Your Gender:</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="male" required> Male
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="gender" value="female" required> Female
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" id="submitBtn">Generate Name</button>
+                    </form>
+
+                    <!-- Hidden Result Display Container -->
+                    <div id="resultContainer" class="result-box hidden">
+                        <h4>Your Akan Name is:</h4>
+                        <div id="akanNameDisplay" class="name-highlight"></div>
+                        <p id="dayDisplay"></p>
+                        <button type="button" id="clearBtn">Clear & Reset</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
