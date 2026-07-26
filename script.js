@@ -197,3 +197,8 @@ form.addEventListener("submit", function(event) {
 
   displayResult(dayIndex, name);
 });
+
+
+// CLEAR BUTTON
+clearBtn.addEventListener("click", clearForm);
+
