@@ -1,28 +1,44 @@
 # Akan Name Generator
 
-## Author
+## Overview
 
-**Julius Kirima**
+The Akan Name Generator is a web application that determines the day of the week a user was born and assigns the corresponding Akan name based on their gender. Akan names originate from Ghanaian culture, where children are traditionally named according to the day of the week they are born.
+
+The application validates user input, calculates the birth day using the required Akan day formula, and displays the appropriate Akan name.
 
 ---
 
-## Project Description
+## Live Demo
 
-Akan Name Generator is a simple web application that calculates the day of the week a user was born and assigns the corresponding Akan name based on their gender. Akan names originate from Ghanaian culture, where children are traditionally named according to the day of the week they were born.
+**GitHub Pages**
 
-This project demonstrates the use of JavaScript functions, arrays, control flow, operators, form handling, and input validation while providing users with an interactive and responsive experience.
+
+
+```text
+https://kirima-julius.github.io/AKAN-NAME-GENERATOR/
+```
+
+---
+
+## Repository
+
+
+
+```text
+https://github.com/kirima-julius/AKAN-NAME-GENERATOR
+```
 
 ---
 
 ## Features
 
-* Calculate the day of the week from a birthdate.
+* Calculate the day of the week from a user's birthdate.
 * Generate the correct Akan name based on gender.
-* Validate user input before processing.
+* Validate birthdate and gender input.
 * Detect leap years for accurate date validation.
 * Prevent future dates from being selected.
-* Display meaningful error messages for invalid input.
-* Clear the form and reset the application.
+* Display informative validation messages.
+* Reset the form using the Clear button.
 * Responsive and user-friendly interface.
 
 ---
@@ -38,73 +54,121 @@ This project demonstrates the use of JavaScript functions, arrays, control flow,
 
 ---
 
-## Project Setup Instructions
+## Project Structure
 
-1. Clone the repository.
-
-```bash
-https://kirima-julius.github.io/AKAN-NAME-GENERATOR/
+```text
+akan-name-generator/
+│
+├── index.html
+├── styles.css
+├── script.js
+├── images/
+└── README.md
 ```
 
-2. Navigate into the project folder.
+---
+
+## Installation and Setup
+
+Clone the repository.
+
+```bash
+git clone https://github.com/your-username/akan-name-generator.git
+```
+
+Navigate to the project folder.
 
 ```bash
 cd akan-name-generator
 ```
 
-3. Open the project in Visual Studio Code.
+Open the project in Visual Studio Code.
 
 ```bash
 code .
 ```
 
-4. Open **index.html** in your browser or use the Live Server extension.
+Launch the project by opening `index.html` in your browser or by using the Live Server extension.
 
 ---
 
-## BDD (Behavior Driven Development)
+## Usage
 
-| Behavior                                         | Input                  | Expected Output                       |
-| ------------------------------------------------ | ---------------------- | ------------------------------------- |
-| User enters a valid birthdate and selects Male   | Birthdate + Male       | Displays the correct male Akan name   |
-| User enters a valid birthdate and selects Female | Birthdate + Female     | Displays the correct female Akan name |
-| User submits without selecting a birthdate       | No birthdate           | Displays an error message and alert   |
-| User submits without selecting a gender          | No gender              | Displays an error message and alert   |
-| User enters an invalid date                      | Invalid date           | Displays an error message             |
-| User enters February 29 on a non-leap year       | Invalid leap year date | Displays an error message             |
-| User enters a future date                        | Future birthdate       | Displays an error message             |
-| User clicks the Clear button                     | Click Clear            | Resets the form and hides the result  |
+1. Open the application.
+2. Select your birthdate.
+3. Choose your gender.
+4. Click **Generate Akan Name**.
+5. View your Akan name and the day of the week you were born.
+6. Click **Clear** to reset the form.
 
 ---
 
-## Live Demo
+## Behavior-Driven Development (BDD)
 
-GitHub Pages:
+| Behavior                                         | Input                    | Output                                   |
+| ------------------------------------------------ | ------------------------ | ---------------------------------------- |
+| User enters a valid birthdate and selects Male   | Valid birthdate + Male   | Displays the correct male Akan name      |
+| User enters a valid birthdate and selects Female | Valid birthdate + Female | Displays the correct female Akan name    |
+| User submits without selecting a birthdate       | No birthdate             | Displays an alert and validation message |
+| User submits without selecting a gender          | No gender                | Displays an alert and validation message |
+| User enters an invalid date                      | Invalid date             | Displays an error message                |
+| User enters February 29 on a non-leap year       | Invalid leap year date   | Displays a validation message            |
+| User selects a future date                       | Future birthdate         | Displays an error message                |
+| User clicks the Clear button                     | Click Clear              | Resets the form and hides the result     |
 
-**Paste your deployed GitHub Pages URL here after deployment.**
+---
 
-Example:
+## Akan Naming Chart
 
+| Day       | Male Name | Female Name |
+| --------- | --------- | ----------- |
+| Sunday    | Kwasi     | Akosua      |
+| Monday    | Kwadwo    | Adwoa       |
+| Tuesday   | Kwabena   | Abenaa      |
+| Wednesday | Kwaku     | Akua        |
+| Thursday  | Yaw       | Yaa         |
+| Friday    | Kofi      | Afua        |
+| Saturday  | Kwame     | Ama         |
+
+---
+
+## Formula Used
+
+The application calculates the day of the week using the required Akan day calculation formula.
+
+```text
+d = ((CC / 4) - (2 × CC) - 1 + ((5 × YY) / 4) + ((26 × (MM + 1)) / 10) + DD) mod 7
 ```
-https://YOUR_USERNAME.github.io/akan-name-generator/
-```
+
+Where:
+
+| Symbol | Description                  |
+| ------ | ---------------------------- |
+| CC     | First two digits of the year |
+| YY     | Last two digits of the year  |
+| MM     | Birth month                  |
+| DD     | Birth day                    |
+| mod    | Modulus operator (%)         |
 
 ---
 
-## Contact Information
+## Future Enhancements
 
-**Author:** Julius Kirima
+* Add dark mode.
+* Display additional information about Akan culture.
+* Support multiple languages.
+* Store previously generated Akan names.
+* Improve accessibility features.
 
-Website: https://www.jukatech.com
+---
 
-Email:
+## Author
 
-* [info@jukatech.com](mailto:info@jukatech.com)
+**Julius Kirima**
 
-GitHub:
-
-* https://github.com/julius-kirima/
-* https://github.com/kirima-julius/
+* Website: https://www.jukatech.com
+* Email: [info@jukatech.com](mailto:info@jukatech.com)
+* GitHub: https://github.com/your-username
 
 ---
 
@@ -112,6 +176,4 @@ GitHub:
 
 This project is licensed under the MIT License.
 
-Copyright (c) 2026 Julius Kirima
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, subject to the conditions of the MIT License.
+Copyright © 2026 Julius Kirima. All rights reserved.
