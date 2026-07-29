@@ -2,6 +2,7 @@
 const form = document.getElementById("akanForm");
 const birthdate = document.getElementById("birthdate");
 const clearBtn = document.getElementById("clearBtn");
+//finds an HTML element using its id so that JavaScript can work with it.
 
 const result = document.getElementById("resultContainer");
 const akanName = document.getElementById("akanNameDisplay");
@@ -90,11 +91,12 @@ function validateInput(dateInput, genderInput) {
 
 
   if (year < 1900) {
-    dateError.textContent = "Please enter a valid birth year.";
+    dateError.textContent = "Please enter a valid birth year .";
     alert("Please enter a valid birth year.");
     return false;
   }
 
+  //Validating day
   const maxDay = getDaysInMonth(month, year);
 
   if (day < 1 || day > maxDay) {
@@ -103,6 +105,8 @@ function validateInput(dateInput, genderInput) {
     return false;
   }
 
+  //Validate future Date
+                    //creates a Date object using the user's birthday.
   const enteredDate = new Date(year, month - 1, day);
 
   if (enteredDate > today) {
@@ -118,7 +122,9 @@ function validateInput(dateInput, genderInput) {
 // CALCULATE DAY
 function calculateDay(day, month, year) {
 
+  //First two digits of the year
   const CC = Math.floor(year / 100);
+  //Last two digits of the year
   const YY = year % 100;
 
   let dayIndex =
@@ -170,7 +176,7 @@ function clearForm() {
   result.classList.add("hidden");
 }
 
-/ SUBMIT
+//SUBMIT
 form.addEventListener("submit", function(event) {
 
   event.preventDefault();
