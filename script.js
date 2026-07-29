@@ -45,7 +45,7 @@ const femaleNames = [
 
 //Limit Date  PREVENT FUTURE DATES 
 
-const today = newDate()
+const today = new Date()
 
 birthdate.max = today.toISOString().split("T")[0];
 
